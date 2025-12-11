@@ -353,16 +353,16 @@
           <h5>Education & Experience</h5>
           <ul class="timeline mt-3">
             <li>
+              <strong>2025 - Present</strong>
+              <div class="muted">Internship - Electrical Design Engineer - PT. Marine Propulsion Solution</div>
+            </li>
+            <li>
               <strong>2023 - Present</strong>
               <div class="muted">Mahasiswa Teknologi Rekayasa Instrumentasi dan Kontrol — Universitas Gadjah Mada</div>
             </li>
             <li>
-              <strong>2022</strong>
-              <div class="muted">Project: Sensor Monitoring & Control (Proyek pribadi)</div>
-            </li>
-            <li>
-              <strong>2021</strong>
-              <div class="muted">Kegiatan Laboratorium Instrumentasi</div>
+              <strong>2020 - 2023</strong>
+              <div class="muted">Siswa - SMA Negeri 1 Sidikalang</div>
             </li>
           </ul>
 
@@ -389,10 +389,9 @@
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">ROBOT LINE AND MAZE FOLLOWER</h5>
               <p class="card-text muted">PID adalah sistem kendali loop tertutup yang mengatur keluaran berdasarkan
-                selisih antara setpoint
-                dan nilai aktual. Kendali P merespons besar eror saat ini, I mengakumulasi eror untuk menghilangkan
-                offset, dan D merespons
-                perubahan eror untuk meredam osilasi dan mempercepat stabilisasi.
+                selisih antara setpoint dan nilai aktual. Kendali P merespons besar eror saat ini, I mengakumulasi
+                eror untuk menghilangkan offset, dan D merespons perubahan eror untuk meredam osilasi dan mempercepat
+                stabilisasi.
               </p>
               <div class="mt-auto">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Robot Line Follower"
@@ -401,7 +400,8 @@
                   dan mencari jalur tercepat menuju tujuan. Untuk menjaga gerak robot tetap stabil dan akurat, dapat digunakan kendali PID,
                   yang memproses selisih antara posisi ideal dan posisi aktual. Komponen P merespons besar eror saat ini, I mengakumulasi 
                   eror yang tersisa agar robot kembali ke jalur secara tepat, dan D mengantisipasi perubahan eror agar gerakan tidak berosilasi."
-                  data-img="Project/poster.jpg" class="btn btn-primary btn-sm">
+                  data-img='["Project/poster.jpg", "Project/image.png", "Project/image1.png", "Project/image2.png", "Project/image3.png", "Project/image4.png", "Project/image5.png" ]' 
+                  class="btn btn-primary btn-sm">
                   Detail
                 </a>
               </div>
@@ -422,7 +422,7 @@
                 pada sistem kendali yang memiliki tingkat kompleksitas tinggi, bersifat nonlinier,
                 atau sulit dioptimalkan dengan metode penyetelan konvensional. </p>
               <div class="mt-auto">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Robot Maze Follower"
+                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Fuzzy Logic"
                   data-desc="Model sistem robot diperoleh melalui uji step response berbasis PWM, di mana data hasil logging
                   digunakan untuk menyusun fungsi transfer orde dua sebagai pendekatan dinamika aktuator. Dengan
                   model ini, Algoritma Genetik digunakan untuk mengoptimalkan parameter Kp, Ki, dan Kd menggunakan
@@ -431,7 +431,8 @@
                   Melalui proses seleksi, crossover, dan mutasi, GA menghasilkan kombinasi PID yang optimal terhadap
                   model. Namun implementasi pada robot fisik menunjukkan ketidakstabilan, menandakan bahwa model
                   eksperimen tidak sepenuhnya merepresentasikan dinamika nyata sehingga parameter PID hasil GA tidak
-                  dapat bekerja secara andal di kondisi sebenarnya." data-img="Project/Fuzzy-Project.png"
+                  dapat bekerja secara andal di kondisi sebenarnya." data-img='["Project/Fuzzy-Project.png", "Project/fuzzy.png",
+                  "Project/fuzzy1.png", "Project/fuzzy2.png"]'
                   class="btn btn-primary btn-sm">
                   Detail
                 </a>
@@ -449,6 +450,32 @@
               <p class="card-text muted">Lampu Otomatis Menggunakan Sensor Gerak Proximity dengan menggunakan IC CD4017
                 dan IC LM358.</p>
               <div class="mt-auto">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Motion Sensor"
+                  data-desc="Motion sensor berfungsi sebagai pemicu utama rangkaian. Saat mendeteksi gerakan, sensor 
+                  mengirim sinyal ke transistor BC557 sehingga LED merah menyala dan menghasilkan sinyal clock ke IC. 
+                  IC kemudian mengubah sinyal ini menjadi keluaran logika: deteksi pertama mengaktifkan Q1 yang menyalakan 
+                  LED hijau dan mengaktifkan relay untuk menyalakan lampu AC. Pada deteksi berikutnya, IC mengeluarkan 
+                  sinyal ke Q2 yang mereset rangkaian, mematikan transistor, memadamkan LED, dan mengembalikan relay ke 
+                  kondisi normally-close sehingga lampu AC mati. Dengan demikian, motion sensor bertindak sebagai sumber 
+                  trigger yang mengontrol perubahan status ON/OFF pada sistem melalui rangkaian transistor, IC, dan relay."
+                  data-img='["Project/3D.jpg", "Project/Motion.png", "Project/Motion1.png", "Project/Motion2.png", "Project/Motion3.png"]' 
+                  class="btn btn-primary btn-sm">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="col" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100">
+            <img src="Project/3.jpeg" class="card-img-top" alt="Project 3 thumbnail" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">MOTION SENSOR</h5>
+              <p class="card-text muted">Lampu Otomatis Menggunakan Sensor Gerak Proximity dengan menggunakan IC CD4017
+                dan IC LM358.</p>
+              <div class="mt-auto">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Robot Maze Follower"
                   data-desc="Motion sensor berfungsi sebagai pemicu utama rangkaian. Saat mendeteksi gerakan, sensor 
                   mengirim sinyal ke transistor BC557 sehingga LED merah menyala dan menghasilkan sinyal clock ke IC. 
@@ -457,13 +484,14 @@
                   sinyal ke Q2 yang mereset rangkaian, mematikan transistor, memadamkan LED, dan mengembalikan relay ke 
                   kondisi normally-close sehingga lampu AC mati. Dengan demikian, motion sensor bertindak sebagai sumber 
                   trigger yang mengontrol perubahan status ON/OFF pada sistem melalui rangkaian transistor, IC, dan relay."
-                  data-img="Project/3D.jpg" class="btn btn-primary btn-sm">
+                  data-img='["Project/1.jpeg", "Project/2.jpeg", "Project/4.jpeg"]' class="btn btn-primary btn-sm">
                   Detail
                 </a>
               </div>
             </div>
           </div>
         </div>
+
 
       </div>
 
@@ -554,24 +582,28 @@
   <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
-
         <div class="modal-header">
           <h5 class="modal-title">Project title</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-
         <div class="modal-body">
-
-          <!-- 👇 Tambahkan baris INI -->
-          <img id="projectModalImg" class="img-fluid rounded mb-3" alt="">
-          <!-- ☝️ Ini akan diisi otomatis oleh script -->
-
           <p id="projectModalDesc">Project description goes here.</p>
+          <div id="projectCarousel" class="carousel slide mt-3" data-bs-ride="carousel">
+            <div class="carousel-inner" id="projectCarouselInner"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
-
       </div>
     </div>
   </div>
+
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -610,17 +642,36 @@
 
       const title = btn.getAttribute('data-title');
       const desc = btn.getAttribute('data-desc');
-      const img = btn.getAttribute('data-img');
-
+      let imgs;
+      try {
+        imgs = JSON.parse(btn.getAttribute('data-img') || "[]"); // parse JSON array
+      } catch (err) {
+        console.error("Invalid JSON in data-img", err);
+        imgs = [];
+      }
       projectModal.querySelector('.modal-title').textContent = title;
       projectModal.querySelector('#projectModalDesc').textContent = desc;
 
-      // Set image
-      const imgElement = projectModal.querySelector('#projectModalImg');
-      if (imgElement) {
-        imgElement.src = img || "";
-        imgElement.style.display = img ? "block" : "none";
-      }
+      // Kosongkan carousel lama
+      const carouselInner = projectModal.querySelector('#projectCarouselInner');
+      carouselInner.innerHTML = '';
+
+      // Tambahkan gambar ke carousel
+      imgs.forEach((src, index) => {
+        const div = document.createElement('div');
+        div.classList.add('carousel-item');
+        if (index === 0) div.classList.add('active');
+
+        const img = document.createElement('img');
+        img.src = src;
+        img.classList.add('d-block', 'w-100');
+        img.alt = `${title} image ${index + 1}`;
+        img.style.objectFit = "contain"; // landscape/portrait rapi
+        img.style.maxHeight = "400px";    // sesuaikan tinggi
+
+        div.appendChild(img);
+        carouselInner.appendChild(div);
+      });
     });
 
     // Form validation

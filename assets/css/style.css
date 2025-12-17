@@ -1,0 +1,362 @@
+    :root {
+      --color-primary: #4f46e5;
+      --bg: #ffffff;
+      --muted: #6b7280;
+      --surface: #f3f4f6;
+      --border: #e5e7eb;
+      --radius: 12px;
+      --max-width: 1100px;
+      --glass: rgba(255, 255, 255, 0.6);
+      --transition: 0.25s ease;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    .dark {
+      --color-primary: #818cf8;
+      --bg: #0b1220;
+      --muted: #94a3b8;
+      --surface: #0f1724;
+      --border: #1f2937;
+      --glass: rgba(10, 15, 25, 0.6);
+      color-scheme: dark;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: inherit;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Container width control */
+    .container-limited {
+      max-width: var(--max-width);
+    }
+
+    /* Navbar */
+    .navbar {
+      transition: all 0.35s ease;
+      padding: 18px 0;
+      background: var(--glass);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar.shrink {
+      padding: 8px 0;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      color: var(--color-primary) !important;
+    }
+
+    .nav-link {
+      color: inherit !important;
+    }
+
+    .nav-link.active {
+      color: var(--color-primary) !important;
+      font-weight: 600
+    }
+
+    /* Hero */
+    .hero {
+      padding: 90px 0;
+    }
+
+    .hero .card {
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .hero-cta {
+      margin-top: 18px;
+    }
+
+    /* Cards */
+    .card {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      transition: transform var(--transition), box-shadow var(--transition);
+      border-radius: var(--radius);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(16, 24, 40, 0.08);
+    }
+
+    .card .card-img-top {
+      object-fit: cover;
+      height: 180px;
+    }
+
+    /* Projects grid */
+    /* .projects-grid {
+      gap: 1.25rem;
+    } */
+
+    /* Progress UI */
+    .skill-line {
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .skill-line>i {
+      display: block;
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--color-primary), #7c83ff);
+    }
+
+    /* Timeline */
+    .timeline {
+      list-style: none;
+      padding-left: 0;
+      border-left: 3px solid var(--border);
+      margin-left: 10px
+    }
+
+    .timeline li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 22px
+    }
+
+    .timeline li::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      position: absolute;
+      left: -10px;
+      top: 4px
+    }
+
+    /* Footer */
+    footer {
+      padding: 28px 0;
+      background: transparent;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 60px
+    }
+
+    /* Utilities */
+    .muted {
+      color: var(--muted);
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    .btn-outline-primary {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    /* Responsive tweaks */
+    @media(min-width:992px) {
+      .hero {
+        padding: 120px 0
+      }
+    }
+
+    /* accessibility focus */
+
+    /* Dark mode heading & nav text enhancement */
+    .dark h1,
+    .dark h2,
+    .dark h3,
+    .dark h4,
+    .dark h5,
+    .dark h6 {
+      color: #ffffff !important;
+    }
+
+    .dark .nav-link,
+    .dark .navbar-brand {
+      color: #f3f4f6 !important;
+    }
+
+    .dark .section-title {
+      color: #ffffff !important;
+    }
+
+    /* Additional: About Me skill titles */
+    .dark .fw-semibold {
+      color: #ffffff !important;
+    }
+
+    .dark .progress-bar {
+      color: #ffffff !important;
+    }
+
+    .dark h1,
+    .dark h2,
+    .dark h3,
+    .dark h4,
+    .dark h5,
+    .dark h6 {
+      color: #ffffff !important;
+    }
+
+    .dark .nav-link,
+    .dark .navbar-brand {
+      color: #f3f4f6 !important;
+    }
+
+    .dark .section-title {
+      color: #ffffff !important;
+    }
+
+    a:focus,
+    button:focus {
+      outline: 3px solid rgba(79, 70, 229, 0.18);
+      outline-offset: 2px
+    }
+
+    /* Loader */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: var(--bg, #fff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity .4s ease;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(79, 70, 229, .3);
+      border-top-color: rgba(79, 70, 229, 1);
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    #loader.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    :root {
+      --icon-default: #9e9e9e;
+    }
+
+    body.dark {
+      --icon-default: #cfcfcf;
+    }
+
+    .contact-icons {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-icons .icon {
+      color: var(--icon-default);
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-icons .icon i {
+      font-size: 2.5rem;
+      display: inline-block;
+    }
+
+    .contact-icons .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-icons .icon i {
+      line-height: 1;
+    }
+
+    .contact-icons .icon:hover {
+      transform: translateY(-4px);
+    }
+
+    .icon.email:hover {
+      color: #d44638;
+    }
+
+    .icon.linkedin:hover {
+      color: #0077b5;
+    }
+
+    .icon.github:hover {
+      color: #000000;
+    }
+
+    body.dark .icon.github:hover {
+      color: #ffffff;
+    }
+
+
+    .icon.instagram i {
+      transition: all 0.3s ease;
+    }
+
+    .icon.instagram:hover i {
+      background: linear-gradient(45deg,
+          #feda75,
+          #fa7e1e,
+          #d62976,
+          #962fbf,
+          #4f5bd5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* =========================
+   CONTACT ICON SIZE
+   ========================= */
+
+    .contact-icons {
+      display: flex;
+      gap: 1.5rem;
+      /* jarak antar ikon */
+    }
+
+    .contact-icons .icon {
+      width: 64px;
+      height: 64px;
+      font-size: 2.6rem;
+      /* ukuran ikon */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: transform 0.25s ease;
+    }
+
+    .contact-icons .icon:hover {
+      transform: scale(1.1);
+    }
+
+    /* pastikan ikon tetap center */
+    .contact-icons .icon i {
+      line-height: 1;
+    }

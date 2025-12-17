@@ -13,241 +13,24 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <style>
-    :root {
-      --color-primary: #4f46e5;
-      --bg: #ffffff;
-      --muted: #6b7280;
-      --surface: #f3f4f6;
-      --border: #e5e7eb;
-      --radius: 12px;
-      --max-width: 1100px;
-      --glass: rgba(255, 255, 255, 0.6);
-      --transition: 0.25s ease;
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    .dark {
-      --color-primary: #818cf8;
-      --bg: #0b1220;
-      --muted: #94a3b8;
-      --surface: #0f1724;
-      --border: #1f2937;
-      --glass: rgba(10, 15, 25, 0.6);
-      color-scheme: dark;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--bg);
-      color: inherit;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Container width control */
-    .container-limited {
-      max-width: var(--max-width);
-    }
-
-    /* Navbar */
-    .navbar {
-      transition: all 0.35s ease;
-      padding: 18px 0;
-      background: var(--glass);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .navbar.shrink {
-      padding: 8px 0;
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-    }
-
-    .navbar-brand {
-      font-weight: 700;
-      color: var(--color-primary) !important;
-    }
-
-    .nav-link {
-      color: inherit !important;
-    }
-
-    .nav-link.active {
-      color: var(--color-primary) !important;
-      font-weight: 600
-    }
-
-    /* Hero */
-    .hero {
-      padding: 90px 0;
-    }
-
-    .hero .card {
-      border-radius: 18px;
-      overflow: hidden;
-    }
-
-    .hero-cta {
-      margin-top: 18px;
-    }
-
-    /* Cards */
-    .card {
-      border: 1px solid var(--border);
-      background: var(--surface);
-      transition: transform var(--transition), box-shadow var(--transition);
-      border-radius: var(--radius);
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 18px 40px rgba(16, 24, 40, 0.08);
-    }
-
-    .card .card-img-top {
-      object-fit: cover;
-      height: 180px;
-    }
-
-    /* Projects grid */
-    .projects-grid {
-      gap: 1.25rem;
-    }
-
-    /* Progress UI */
-    .skill-line {
-      height: 10px;
-      border-radius: 999px;
-      background: rgba(0, 0, 0, 0.06);
-    }
-
-    .skill-line>i {
-      display: block;
-      height: 100%;
-      border-radius: 999px;
-      background: linear-gradient(90deg, var(--color-primary), #7c83ff);
-    }
-
-    /* Timeline */
-    .timeline {
-      list-style: none;
-      padding-left: 0;
-      border-left: 3px solid var(--border);
-      margin-left: 10px
-    }
-
-    .timeline li {
-      position: relative;
-      padding-left: 18px;
-      margin-bottom: 22px
-    }
-
-    .timeline li::before {
-      content: "";
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--color-primary);
-      position: absolute;
-      left: -10px;
-      top: 4px
-    }
-
-    /* Footer */
-    footer {
-      padding: 28px 0;
-      background: transparent;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      margin-top: 60px
-    }
-
-    /* Utilities */
-    .muted {
-      color: var(--muted);
-    }
-
-    .btn-primary {
-      background: var(--color-primary);
-      border-color: var(--color-primary);
-    }
-
-    .btn-outline-primary {
-      border-color: var(--color-primary);
-      color: var(--color-primary);
-    }
-
-    /* Responsive tweaks */
-    @media(min-width:992px) {
-      .hero {
-        padding: 120px 0
-      }
-    }
-
-    /* accessibility focus */
-
-    /* Dark mode heading & nav text enhancement */
-    .dark h1,
-    .dark h2,
-    .dark h3,
-    .dark h4,
-    .dark h5,
-    .dark h6 {
-      color: #ffffff !important;
-    }
-
-    .dark .nav-link,
-    .dark .navbar-brand {
-      color: #f3f4f6 !important;
-    }
-
-    .dark .section-title {
-      color: #ffffff !important;
-    }
-
-    /* Additional: About Me skill titles */
-    .dark .fw-semibold {
-      color: #ffffff !important;
-    }
-
-    .dark .progress-bar {
-      color: #ffffff !important;
-    }
-
-    .dark h1,
-    .dark h2,
-    .dark h3,
-    .dark h4,
-    .dark h5,
-    .dark h6 {
-      color: #ffffff !important;
-    }
-
-    .dark .nav-link,
-    .dark .navbar-brand {
-      color: #f3f4f6 !important;
-    }
-
-    .dark .section-title {
-      color: #ffffff !important;
-    }
-
-    a:focus,
-    button:focus {
-      outline: 3px solid rgba(79, 70, 229, 0.18);
-      outline-offset: 2px
-    }
-  </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+
 
   <!-- NAVBAR START-->
   <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
@@ -296,7 +79,7 @@
           <div class="row mt-4 g-3">
             <div class="col-6 col-md-4">
               <div class="small muted">Projects</div>
-              <div class="h5 fw-bold" style="color:var(--color-primary)">4+</div>
+              <div class="h5 fw-bold" style="color:var(--color-primary)">10+</div>
             </div>
             <div class="col-6 col-md-4">
               <div class="small muted">Certificates</div>
@@ -311,7 +94,7 @@
 
         <div class="col-lg-6 text-center" data-aos="fade-left">
           <div class="card shadow-sm">
-            <img src="foto.jpg" alt="Foto Immanuel" class="img-fluid rounded-3" loading="lazy">
+            <img src="test.webp" alt="Foto Immanuel" class="img-fluid rounded-3" loading="lazy">
           </div>
         </div>
       </div>
@@ -358,7 +141,8 @@
             </li>
             <li>
               <strong>2023 - Present</strong>
-              <div class="muted">Mahasiswa Teknologi Rekayasa Instrumentasi dan Kontrol — Universitas Gadjah Mada</div>
+              <div class="muted">Mahasiswa Teknologi Rekayasa Instrumentasi dan Kontrol — Universitas Gadjah Mada
+              </div>
             </li>
             <li>
               <strong>2020 - 2023</strong>
@@ -380,12 +164,14 @@
     <div class="container container-limited">
       <h2 class="section-title">My Projects</h2>
 
-      <div class="row row-cols-1 row-cols-md-3 projects-grid">
+      <!-- <div class="row row-cols-1 row-cols-md-3 projects-grid"> -->
+      <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+
 
         <!-- Project Card 1 -->
         <div class="col" data-aos="zoom-in">
           <div class="card h-100">
-            <img src="Project/poster.jpg" class="card-img-top" alt="Project 1 thumbnail" loading="lazy">
+            <img src="Project/poster.webp" class="card-img-top" alt="Project 1 thumbnail" loading="lazy">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">ROBOT LINE AND MAZE FOLLOWER</h5>
               <p class="card-text muted">PID adalah sistem kendali loop tertutup yang mengatur keluaran berdasarkan
@@ -395,12 +181,13 @@
               </p>
               <div class="mt-auto">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Robot Line Follower"
-                  data-desc="Robot line follower bergerak dengan mengikuti kontras antara garis dan latar menggunakan sensor. 
-                  Dari konsep dasar ini muncul Line Maze, yaitu versi lebih cerdas yang mampu mengambil keputusan di percabangan 
-                  dan mencari jalur tercepat menuju tujuan. Untuk menjaga gerak robot tetap stabil dan akurat, dapat digunakan kendali PID,
-                  yang memproses selisih antara posisi ideal dan posisi aktual. Komponen P merespons besar eror saat ini, I mengakumulasi 
-                  eror yang tersisa agar robot kembali ke jalur secara tepat, dan D mengantisipasi perubahan eror agar gerakan tidak berosilasi."
-                  data-img='["Project/poster.jpg", "Project/image.png", "Project/image1.png", "Project/image2.png", "Project/image3.png", "Project/image4.png", "Project/image5.png" ]' 
+                  data-desc="Robot line follower bergerak dengan mengikuti kontras antara garis dan latar menggunakan
+                  sensor. Dari konsep dasar ini muncul Line Maze, yaitu versi lebih cerdas yang mampu mengambil
+                  keputusan di percabangan dan mencari jalur tercepat menuju tujuan. Untuk menjaga gerak robot tetap
+                  stabil dan akurat, dapat digunakan kendali PID, yang memproses selisih antara posisi ideal dan posisi
+                  aktual. Komponen P merespons besar eror saat ini, I mengakumulasi eror yang tersisa agar robot kembali
+                  ke jalur secara tepat, dan D mengantisipasi perubahan eror agar gerakan tidak berosilasi."
+                  data-imgs='["Project/poster.webp", "Project/image.webp", "Project/image1.webp", "Project/image2.webp", "Project/image3.webp", "Project/image4.webp", "Project/image5.webp" ]'
                   class="btn btn-primary btn-sm">
                   Detail
                 </a>
@@ -412,7 +199,7 @@
         <!-- Project Card 2 -->
         <div class="col" data-aos="zoom-in" data-aos-delay="100">
           <div class="card h-100">
-            <img src="Project/Fuzzy-Project.png" class="card-img-top" alt="Project 2 thumbnail" loading="lazy">
+            <img src="Project/Fuzzy-Project.webp" class="card-img-top" alt="Project 2 thumbnail" loading="lazy">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">PENERAPAN ALGORITMA GENETIK UNTUK MENCARI PARAMETER PID</h5>
               <p class="card-text muted">Secara umum, dapat disimpulkan bahwa metode algoritma genetika dalam
@@ -422,8 +209,8 @@
                 pada sistem kendali yang memiliki tingkat kompleksitas tinggi, bersifat nonlinier,
                 atau sulit dioptimalkan dengan metode penyetelan konvensional. </p>
               <div class="mt-auto">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Fuzzy Logic"
-                  data-desc="Model sistem robot diperoleh melalui uji step response berbasis PWM, di mana data hasil logging
+                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Fuzzy Logic" data-desc="Model sistem robot 
+                diperoleh melalui uji step response berbasis PWM, di mana data hasil logging
                   digunakan untuk menyusun fungsi transfer orde dua sebagai pendekatan dinamika aktuator. Dengan
                   model ini, Algoritma Genetik digunakan untuk mengoptimalkan parameter Kp, Ki, dan Kd menggunakan
                   fungsi objektif berbasis integral error untuk menilai performa tracking terhadap setpoint jarak.
@@ -431,9 +218,8 @@
                   Melalui proses seleksi, crossover, dan mutasi, GA menghasilkan kombinasi PID yang optimal terhadap
                   model. Namun implementasi pada robot fisik menunjukkan ketidakstabilan, menandakan bahwa model
                   eksperimen tidak sepenuhnya merepresentasikan dinamika nyata sehingga parameter PID hasil GA tidak
-                  dapat bekerja secara andal di kondisi sebenarnya." data-img='["Project/Fuzzy-Project.png", "Project/fuzzy.png",
-                  "Project/fuzzy1.png", "Project/fuzzy2.png"]'
-                  class="btn btn-primary btn-sm">
+                  dapat bekerja secara andal di kondisi sebenarnya." data-imgs='["Project/Fuzzy-Project.webp", "Project/fuzzy.webp",
+                  "Project/fuzzy1.webp", "Project/fuzzy2.webp"]' class="btn btn-primary btn-sm">
                   Detail
                 </a>
               </div>
@@ -444,22 +230,29 @@
         <!-- Project Card 3 -->
         <div class="col" data-aos="zoom-in" data-aos-delay="200">
           <div class="card h-100">
-            <img src="Project/3D 2.jpg" class="card-img-top" alt="Project 3 thumbnail" loading="lazy">
+            <img src="Project/SAR.webp" class="card-img-top" alt="Project 3 thumbnail" loading="lazy">
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">MOTION SENSOR</h5>
-              <p class="card-text muted">Lampu Otomatis Menggunakan Sensor Gerak Proximity dengan menggunakan IC CD4017
-                dan IC LM358.</p>
+              <h5 class="card-title">7-Bit SAR ADC</h5>
+              <p class="card-text muted">Proyek ini berfokus pada perancangan dan implementasi 7-Bit Successive
+                Approximation Register (SAR) Analog-to-Digital Converter (ADC) yang mengonversi sinyal analog menjadi
+                data digital secara bertahap menggunakan metode binary search. Sistem menunjukkan prinsip kerja ADC SAR
+                dalam menghasilkan konversi yang efisien dan akurat.</p>
               <div class="mt-auto">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Motion Sensor"
-                  data-desc="Motion sensor berfungsi sebagai pemicu utama rangkaian. Saat mendeteksi gerakan, sensor 
-                  mengirim sinyal ke transistor BC557 sehingga LED merah menyala dan menghasilkan sinyal clock ke IC. 
-                  IC kemudian mengubah sinyal ini menjadi keluaran logika: deteksi pertama mengaktifkan Q1 yang menyalakan 
-                  LED hijau dan mengaktifkan relay untuk menyalakan lampu AC. Pada deteksi berikutnya, IC mengeluarkan 
-                  sinyal ke Q2 yang mereset rangkaian, mematikan transistor, memadamkan LED, dan mengembalikan relay ke 
-                  kondisi normally-close sehingga lampu AC mati. Dengan demikian, motion sensor bertindak sebagai sumber 
-                  trigger yang mengontrol perubahan status ON/OFF pada sistem melalui rangkaian transistor, IC, dan relay."
-                  data-img='["Project/3D.jpg", "Project/Motion.png", "Project/Motion1.png", "Project/Motion2.png", "Project/Motion3.png"]' 
-                  class="btn btn-primary btn-sm">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Robot Maze Follower"
+                  data-desc="Proyek 7-Bit SAR ADC ini bertujuan untuk memahami dan mengimplementasikan proses konversi
+                  sinyal analog ke digital menggunakan arsitektur Successive Approximation Register (SAR). ADC dirancang
+                  untuk menghasilkan resolusi 7-bit, di mana proses konversi dilakukan secara bertahap melalui mekanisme
+                  perbandingan tegangan yang menyerupai algoritma binary search. Sistem SAR ADC terdiri dari beberapa
+                  blok utama, yaitu komparator, Digital-to-Analog Converter (DAC), register SAR, dan logika kontrol.
+                  Pada setiap langkah konversi, register SAR menentukan nilai bit secara berurutan dari MSB hingga LSB,
+                  sementara DAC menghasilkan tegangan referensi yang dibandingkan dengan sinyal analog masukan. Hasil
+                  perbandingan ini digunakan untuk menetapkan nilai bit berikutnya hingga seluruh bit selesai
+                  ditentukan. Melalui proyek ini, diperoleh pemahaman menyeluruh mengenai trade-off antara resolusi,
+                  kecepatan, dan kompleksitas rangkaian pada ADC. Implementasi 7-bit SAR ADC menunjukkan bagaimana
+                  arsitektur SAR menjadi solusi yang efisien untuk aplikasi dengan kebutuhan konversi cepat dan konsumsi
+                  daya yang relatif rendah."
+                  data-imgs='["Project/SAR.webp", "Project/SAR1.webp", "Project/SAR2.webp", "Project/SAR3.webp"]'
+                  data-video="https://www.youtube.com/embed/Pur3_N4T6GQ?feature=share" class="btn btn-primary btn-sm">
                   Detail
                 </a>
               </div>
@@ -470,21 +263,239 @@
         <!-- Project Card 4 -->
         <div class="col" data-aos="zoom-in" data-aos-delay="200">
           <div class="card h-100">
-            <img src="Project/3.jpeg" class="card-img-top" alt="Project 3 thumbnail" loading="lazy">
+            <img src="Project/PMLD.webp" class="card-img-top" alt="Project 3 thumbnail" loading="lazy">
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">MOTION SENSOR</h5>
-              <p class="card-text muted">Lampu Otomatis Menggunakan Sensor Gerak Proximity dengan menggunakan IC CD4017
-                dan IC LM358.</p>
+              <h5 class="card-title">Capstone Project - Simulasi Differential Drive Mobile Robot menggunakan ROS2 untuk
+                Mengikuti Garis</h5>
+              <p class="card-text muted">Proyek ini mengimplementasikan Robot Operating System (ROS) untuk mengembangkan
+                sistem robotik dengan arsitektur modular berbasis node dan topic. Sistem memproses data sensor dan
+                mengendalikan pergerakan robot secara terkoordinasi dalam lingkungan simulasi, sehingga menunjukkan
+                penerapan konsep komunikasi antar-node dan kontrol robot otonom menggunakan ROS.</p>
               <div class="mt-auto">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Robot Maze Follower"
-                  data-desc="Motion sensor berfungsi sebagai pemicu utama rangkaian. Saat mendeteksi gerakan, sensor 
-                  mengirim sinyal ke transistor BC557 sehingga LED merah menyala dan menghasilkan sinyal clock ke IC. 
-                  IC kemudian mengubah sinyal ini menjadi keluaran logika: deteksi pertama mengaktifkan Q1 yang menyalakan 
-                  LED hijau dan mengaktifkan relay untuk menyalakan lampu AC. Pada deteksi berikutnya, IC mengeluarkan 
-                  sinyal ke Q2 yang mereset rangkaian, mematikan transistor, memadamkan LED, dan mengembalikan relay ke 
-                  kondisi normally-close sehingga lampu AC mati. Dengan demikian, motion sensor bertindak sebagai sumber 
-                  trigger yang mengontrol perubahan status ON/OFF pada sistem melalui rangkaian transistor, IC, dan relay."
-                  data-img='["Project/1.jpeg", "Project/2.jpeg", "Project/4.jpeg"]' class="btn btn-primary btn-sm">
+                  data-desc="Proyek ini merupakan implementasi Robot Operating System (ROS/ROS2) sebagai kerangka kerja
+                  pengembangan sistem robotik berbasis perangkat lunak. Sistem dirancang dengan pendekatan arsitektur
+                  modular, di mana fungsi-fungsi robot dibagi ke dalam beberapa node yang saling berkomunikasi melalui
+                  mekanisme topic dan message. Pendekatan ini memungkinkan pemrosesan data sensor dan pengendalian gerak
+                  robot dilakukan secara terpisah namun terkoordinasi. Dalam proyek ini, ROS digunakan untuk
+                  mensimulasikan perilaku robot bergerak secara otonom di lingkungan virtual. Data sensor diproses oleh
+                  node tertentu untuk menentukan kondisi lingkungan, kemudian hasilnya digunakan oleh node kontrol untuk
+                  menghasilkan perintah gerak. Proses komunikasi antar-node berjalan secara real-time, sehingga
+                  perubahan kondisi dapat langsung memengaruhi respons sistem. Melalui proyek ini, ditunjukkan pemahaman
+                  terhadap konsep inti ROS seperti publisher-subscriber, manajemen node, serta integrasi logika kontrol
+                  dalam sistem robotik. Implementasi berbasis simulasi memungkinkan pengujian dan analisis perilaku
+                  robot secara efisien, sekaligus memberikan dasar yang kuat untuk pengembangan lebih lanjut pada sistem
+                  robotik nyata."
+                  data-imgs='["Project/PMLD.webp", "Project/PMLD1.webp", "Project/PMLD2.webp", "Project/PMLD3.webp", "Project/PMLD4.webp"]'
+                  data-video="https://www.youtube.com/embed/4jPfd_6z_6g?si=d0AFGYIwxrz0zujU"
+                  class="btn btn-primary btn-sm">
+                  Detail
+                </a>
+                <!-- Tombol Blog -->
+                <a href="https://otomasi.sv.ugm.ac.id/2025/06/09/simulasi-differential-drive-mobile-robot-menggunakan-ros2-untuk-mengikuti-garis/"
+                  target="_blank" class="btn btn-warning btn-sm">
+                  Blog
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 5 -->
+        <div class="col" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100">
+            <img src="Project/DTMF.webp" class="card-img-top" alt="Project 3 thumbnail" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Dual Tone Multi Frequency (DTMF)</h5>
+              <p class="card-text muted">Proyek ini membahas implementasi dan evaluasi filter digital FIR dan IIR pada
+                sistem Dual Tone Multi Frequency (DTMF). Filter dirancang untuk memisahkan komponen frekuensi sinyal
+                DTMF secara efektif, serta mengonversi filter kontinu menjadi filter digital IIR menggunakan Bilinear
+                Transform, dengan validasi karakteristik respons frekuensi melalui MATLAB.</p>
+              <div class="mt-auto">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal"
+                  data-title="Dual Tone Multi Frequency (DTMF)" data-desc="Proyek Dual Tone Multi Frequency (DTMF) ini
+                  berfokus pada perancangan, implementasi, dan evaluasi filter digital dalam pemrosesan sinyal
+                  telekomunikasi. Dua jenis filter digital, yaitu Finite Impulse Response (FIR) dan Infinite Impulse
+                  Response (IIR), diimplementasikan dan diuji untuk menganalisis kemampuan masing-masing filter dalam
+                  menyaring sinyal DTMF yang terdiri dari dua komponen frekuensi berbeda. Filter FIR dirancang untuk
+                  memisahkan frekuensi rendah dan tinggi yang merepresentasikan digit pada sinyal DTMF. Hasil pengujian
+                  menunjukkan bahwa filter FIR mampu mengisolasi frekuensi target dengan distorsi minimal serta
+                  memberikan atenuasi yang signifikan pada frekuensi non-target, sehingga efektif digunakan dalam
+                  aplikasi DTMF. Selain itu, filter kontinu juga dikonversi menjadi filter digital IIR menggunakan
+                  metode Bilinear Transform, yang bertujuan mempertahankan karakteristik respons frekuensi filter analog
+                  ke dalam domain digital. Validasi dan analisis performa filter dilakukan menggunakan MATLAB, dengan
+                  membandingkan respons frekuensi antara filter kontinu dan filter digital hasil konversi. Hasil
+                  verifikasi menunjukkan bahwa filter IIR mampu merepresentasikan karakteristik filter kontinu dengan
+                  akurasi yang baik, sehingga proyek ini memberikan pemahaman komprehensif mengenai desain dan
+                  implementasi filter digital dalam sistem DTMF."
+                  data-imgs='["Project/DTMF.webp", "Project/DTMF1.webp", "Project/DTMF2.webp"]'
+                  data-video="https://www.youtube.com/embed/EKLvtD3Lo0s" class="btn btn-primary btn-sm">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 6 -->
+        <div class="col" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100">
+            <img src="Project/ML5.webp" class="card-img-top" alt="Project 3 thumbnail" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Klasifikasi Aktivitas Manusia Menggunakan IMU dan Magnetometer dengan Pendekatan
+                Machine Learning</h5>
+              <p class="card-text muted">Perbandingan Metode Klasifikasi Aktifitas Manusia Menggunaan
+                Sensor IMU dan Magnetometer Miniature Pada Dataset UCI Daily
+                And Sports Activities</p>
+              <div class="mt-auto">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Perbandingan Metode Klasifikasi Aktifitas Manusia Menggunaan
+                Sensor IMU dan Magnetometer Miniature Pada Dataset UCI Daily And Sports Activities" data-desc="Proyek
+                  ini berfokus pada evaluasi dan perbandingan performa berbagai algoritma machine learning klasik dalam
+                  melakukan klasifikasi aktivitas manusia berbasis data sensor IMU dan magnetometer menggunakan UCI
+                  Daily and Sports Activities Dataset. Tujuan utama proyek ini adalah mengidentifikasi metode
+                  klasifikasi yang paling efektif dalam mengenali pola aktivitas manusia dari data sensor gerak. Tahapan
+                  pengembangan dimulai dengan preprocessing data, yang mencakup normalisasi dan seleksi fitur untuk
+                  meningkatkan kualitas data dan performa model. Selanjutnya dilakukan reduksi dimensi menggunakan
+                  Principal Component Analysis (PCA), khususnya pada model SVM, untuk mengurangi kompleksitas komputasi
+                  tanpa menghilangkan informasi penting. Beberapa algoritma klasifikasi diterapkan dan dibandingkan,
+                  yaitu K-Nearest Neighbor (KNN), Support Vector Machine (SVM), Random Forest (RF), dan Artificial
+                  Neural Network (ANN), dengan penyesuaian parameter guna memperoleh kinerja optimal. Evaluasi model
+                  dilakukan menggunakan metrik akurasi, precision, recall, dan F1-score, serta didukung oleh visualisasi
+                  confusion matrix dan perbandingan hasil prediksi terhadap data aktual. Hasil dari proyek ini
+                  memberikan gambaran komprehensif mengenai kelebihan dan keterbatasan masing-masing algoritma dalam
+                  konteks klasifikasi aktivitas manusia berbasis data sensor."
+                  data-imgs='["Project/ML1.webp", "Project/ML11.webp", "Project/ML2.webp", "Project/ML3.webp", "Project/ML4.webp", "Project/ML5.webp",  "Project/ML6.webp"]'
+                  class="btn btn-primary btn-sm">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 7 -->
+        <div class="col" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100">
+            <img src="Project/SmartHome.webp" class="card-img-top" alt="Project 3 thumbnail" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">SMART HOME</h5>
+              <p class="card-text muted">Proyek ini merupakan sistem Smart Home berbasis IoT yang menggunakan NodeMCU
+                dan platform ThingSpeak untuk monitoring dan kontrol perangkat secara real-time. Sistem mengintegrasikan
+                berbagai sensor dan aktuator, seperti DHT11, PIR, ultrasonik, motor, dan LED, untuk mendukung otomasi
+                rumah sederhana berbasis web. </p>
+              <div class="mt-auto">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Smart Home" data-desc="Proyek ini merupakan pengembangan sistem Smart Home berbasis Internet of Things (IoT) yang
+                  dapat dipantau dan dikendalikan secara jarak jauh melalui platform ThingSpeak. Sistem ini menggunakan
+                  NodeMCU sebagai pengendali utama yang berfungsi menghubungkan berbagai sensor dan aktuator ke jaringan
+                  internet untuk proses monitoring dan kontrol secara real-time. Beberapa sensor dan aktuator
+                  diintegrasikan dalam sistem ini, antara lain sensor DHT11 untuk memantau suhu dan kelembapan
+                  lingkungan, sensor ultrasonik untuk mengukur jarak objek, serta sensor PIR yang digunakan untuk
+                  mendeteksi pergerakan. Deteksi gerakan dari sensor PIR ditampilkan melalui indikator LED, sehingga
+                  pengguna dapat mengetahui kondisi keamanan secara visual. Selain sensor, sistem ini juga dilengkapi
+                  dengan beberapa aktuator, seperti motor DC dan motor servo, yang dikendalikan berdasarkan logika
+                  program tertentu. Motor servo digunakan untuk menggerakkan mekanisme otomatis, sedangkan motor DC
+                  berfungsi menjalankan aktivitas tertentu sesuai kondisi yang terdeteksi oleh sensor. Sistem juga
+                  menyediakan fitur Web LED Control, yang memungkinkan pengguna menyalakan dan mematikan LED secara
+                  langsung melalui antarmuka berbasis web. Dengan mengintegrasikan berbagai sensor, aktuator, dan
+                  konektivitas IoT, proyek Smart Home ini menunjukkan implementasi sistem otomasi rumah sederhana yang
+                  mampu melakukan monitoring lingkungan, deteksi gerakan, serta kontrol perangkat secara jarak jauh
+                  secara terpusat dan terintegrasi."
+                  data-imgs='["Project/SmartHome1.webp", "Project/SmartHome2.webp", "Project/SmartHome3.webp", "Project/SmartHome4.webp"]'
+                  data-video="https://www.youtube.com/embed/FywpwHZtD5Q" class="btn btn-primary btn-sm">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 8 -->
+        <div class="col" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100">
+            <img src="Project/Elins1.webp" class="card-img-top" alt="Project 3 thumbnail" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">PIEZOELECTRIC</h5>
+              <p class="card-text muted">Proyek ini mengembangkan sistem pengukuran denyut nadi pada pergelangan tangan
+                menggunakan sensor piezoelektrik berbasis PVDF. Sensor mengubah tekanan mekanis akibat denyut pembuluh
+                darah menjadi sinyal listrik, sehingga sistem mampu mendeteksi keberadaan denyut nadi secara akurat
+                meskipun sinyal yang dihasilkan relatif lemah. </p>
+              <div class="mt-auto">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Piezoelektrik " data-desc="Sinyal denyut nadi yang diambil dari arteri radial di pergelangan tangan merupakan sinyal
+                  yang relatif lemah dan mudah terpengaruh oleh gangguan lingkungan, seperti medan listrik dan magnet.
+                  Oleh karena itu, sistem pengukuran memerlukan sensor yang memiliki sensitivitas tinggi serta mampu
+                  mendeteksi perubahan tekanan secara akurat. Pada proyek ini digunakan sensor denyut berbasis
+                  piezoelektrik yang memanfaatkan material polyvinylidene fluoride (PVDF). Sensor ini bekerja dengan
+                  mengubah tekanan mekanis akibat denyut pembuluh darah menjadi sinyal listrik, sehingga denyut nadi
+                  dapat dideteksi secara langsung. Sensor piezoelektrik berbasis PVDF memiliki sensitivitas tinggi dan
+                  rentang deteksi tekanan yang luas, sehingga cocok digunakan untuk pengukuran denyut nadi pada
+                  pergelangan tangan. Dengan karakteristik tersebut, sistem mampu menentukan keberadaan denyut nadi
+                  secara andal. Kontribusi saya dalam proyek ini meliputi pemilihan jenis sensor yang sesuai,
+                  perancangan sistem pengukuran denyut nadi, serta pengolahan sinyal untuk memastikan hasil deteksi
+                  denyut yang stabil dan dapat diandalkan."
+                  data-imgs='["Project/Elins1.webp", "Project/Elins2.webp", "Project/Elins.webp"]'
+                  class="btn btn-primary btn-sm">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 9 -->
+        <div class="col" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100">
+            <img src="Project/3.webp" class="card-img-top" alt="Project 3 thumbnail" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">PCB DAN MODUL PRAKTIKUM</h5>
+              <p class="card-text muted">Proyek ini berfokus pada perancangan dan produksi trainer PCB multi-rangkaian
+                yang digunakan sebagai media pembelajaran praktikum elektronika. PCB diproduksi menggunakan sistem
+                BUNGARD dan dilengkapi dengan modul praktikum yang berisi panduan penggunaan dan pengujian rangkaian,
+                sehingga mendukung pembelajaran berbasis praktik bagi mahasiswa.</p>
+              <div class="mt-auto">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Robot Maze Follower"
+                  data-desc="Proyek ini berfokus pada pengembangan trainer PCB multi-rangkaian yang dirancang sebagai
+                  media pembelajaran praktikum elektronika bagi mahasiswa. PCB disusun untuk memuat beberapa rangkaian
+                  dasar dan terapan dalam satu papan, sehingga mahasiswa dapat mempelajari konsep elektronika tidak
+                  hanya secara teori, tetapi juga melalui praktik langsung dan observasi sinyal nyata. Proses
+                  pengembangan dilakukan secara menyeluruh, dimulai dari perancangan skematik dan layout PCB, kemudian
+                  dilanjutkan dengan proses produksi PCB menggunakan sistem BUNGARD. Tahapan produksi mencakup transfer
+                  layout, proses etsa, pengeboran, hingga finishing, sehingga menghasilkan PCB yang siap digunakan dalam
+                  kegiatan pembelajaran. Pendekatan ini memberikan pengalaman langsung terhadap alur manufaktur PCB yang
+                  umum digunakan di lingkungan industri dan pendidikan. Selain perangkat keras, proyek ini juga
+                  dilengkapi dengan penyusunan modul pembelajaran yang dirancang untuk mendukung penggunaan trainer PCB
+                  secara sistematis. Modul tersebut berisi penjelasan konsep, panduan praktikum, serta langkah-langkah
+                  pengujian rangkaian. Dengan integrasi antara trainer PCB dan modul pembelajaran, proyek ini bertujuan
+                  meningkatkan efektivitas pembelajaran elektronika berbasis praktik serta menjembatani kesenjangan
+                  antara teori dan implementasi nyata."
+                  data-imgs='["Project/1.webp", "Project/2.webp", "Project/4.webp", "Project/5.webp", "Project/6.webp"]'
+                  class="btn btn-primary btn-sm">
+                  Detail
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 10 -->
+        <div class="col" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card h-100">
+            <img src="Project/3D 2.webp" class="card-img-top" alt="Project 3 thumbnail" loading="lazy">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">MOTION SENSOR</h5>
+              <p class="card-text muted">Lampu Otomatis Menggunakan Sensor Gerak Proximity dengan menggunakan IC
+                CD4017
+                dan IC LM358.</p>
+              <div class="mt-auto">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal" data-title="Motion Sensor" data-desc="Motion sensor berfungsi sebagai pemicu utama rangkaian. Saat mendeteksi gerakan, sensor
+                  mengirim sinyal ke transistor BC557 sehingga LED merah menyala dan menghasilkan sinyal clock ke IC. IC
+                  kemudian mengubah sinyal ini menjadi keluaran logika: deteksi pertama mengaktifkan Q1 yang menyalakan
+                  LED hijau dan mengaktifkan relay untuk menyalakan lampu AC. Pada deteksi berikutnya, IC mengeluarkan
+                  sinyal ke Q2 yang mereset rangkaian, mematikan transistor, memadamkan LED, dan mengembalikan relay ke
+                  kondisi normally-close sehingga lampu AC mati. Dengan demikian, motion sensor bertindak sebagai sumber
+                  trigger yang mengontrol perubahan status ON/OFF pada sistem melalui rangkaian transistor, IC, dan
+                  relay."
+                  data-imgs='["Project/3D.webp", "Project/Motion.webp", "Project/Motion1.webp", "Project/Motion2.webp", "Project/Motion3.webp"]'
+                  data-video="https://www.youtube.com/embed/q2U4g0Xkgu4" class="btn btn-primary btn-sm">
                   Detail
                 </a>
               </div>
@@ -528,8 +539,6 @@
         </div>
       </div>
 
-
-
     </div>
   </section>
   <!-- PROJECTS END -->
@@ -539,12 +548,34 @@
     <div class="container container-limited">
       <h2 class="section-title">Contact</h2>
       <div class="row g-4">
+        <!-- CONTACT ICONS -->
         <div class="col-md-6" data-aos="fade-right">
-          <p class="muted">Email: <a href="mailto:immanuelmanihuruk03@gmail.com">immanuelmanihuruk03@gmail.com</a></p>
-          <p class="muted">LinkedIn: <a href="https://www.linkedin.com/in/immanuel-marudur-manihuruk-b303152b7/"
-              target="_blank">immanuel-marudur-manihuruk</a></p>
-          <p class="muted">GitHub: <a href="https://github.com/Immanuel0306">https://github.com/Immanuel0306</a></p>
+          <div class="contact-icons">
+
+            <a class="icon email" id="copyEmail" href="mailto:immanuelmanihuruk03@gmail.com" aria-label="Email Immanuel"
+              title="Salin email">
+              <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+            </a>
+
+
+            <a href="https://www.linkedin.com/in/immanuel-marudur-manihuruk-b303152b7/" target="_blank"
+              class="icon linkedin" title="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/Immanuel0306" target="_blank" class="icon github" title="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
+
+            <!-- INSTAGRAM (GRADIENT HOVER) -->
+            <a href="https://www.instagram.com/nuelmnhrk" target="_blank" class="icon instagram" title="Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+
+          </div>
         </div>
+
         <div class="col-md-6" data-aos="fade-left">
           <form class="needs-validation" novalidate>
             <div class="mb-3">
@@ -579,118 +610,74 @@
   </footer>
 
   <!-- Project Modal -->
-  <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+  <div class="modal fade" id="projectModal" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
+
         <div class="modal-header">
-          <h5 class="modal-title">Project title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
+
         <div class="modal-body">
-          <p id="projectModalDesc">Project description goes here.</p>
-          <div id="projectCarousel" class="carousel slide mt-3" data-bs-ride="carousel">
+
+          <p id="projectModalDesc"></p>
+
+          <div class="ratio ratio-16x9 mt-4 d-none" id="projectVideoWrapper">
+            <iframe id="projectVideo" src="" title="Project Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- Carousel -->
+          <div id="projectCarousel" class="carousel slide">
             <div class="carousel-inner" id="projectCarouselInner"></div>
+
             <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
               <span class="carousel-control-prev-icon"></span>
-              <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
               <span class="carousel-control-next-icon"></span>
-              <span class="visually-hidden">Next</span>
             </button>
           </div>
+
         </div>
       </div>
     </div>
   </div>
 
 
+
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 120 });
+  <script src="assets/js/main.js"></script>
 
-    // Navbar shrink
-    const navbar = document.querySelector('.navbar');
-    document.addEventListener('scroll', () => {
-      if (window.scrollY > 80) navbar.classList.add('shrink'); else navbar.classList.remove('shrink');
-    });
 
-    // Dark mode
-    const toggle = document.getElementById('darkModeToggle');
-    const root = document.documentElement;
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark');
-      toggle.textContent = '☀️';
-      toggle.setAttribute('aria-pressed', 'true');
-    }
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      const isDark = document.body.classList.contains('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      toggle.textContent = isDark ? '☀️' : '🌙';
-      toggle.setAttribute('aria-pressed', String(isDark));
-    });
+  <!-- PREMIUM LIGHTBOX -->
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.92); 
+            z-index:3000; justify-content:center; align-items:center; overflow:hidden;">
 
-    // Project modal populate
-    const projectModal = document.getElementById('projectModal');
-    projectModal.addEventListener('show.bs.modal', e => {
-      const btn = e.relatedTarget;
+    <!-- Close -->
+    <div id="lightboxClose"
+      style="position:absolute; top:20px; right:30px; font-size:40px; color:#fff; cursor:pointer;">
+      &times;
+    </div>
 
-      const title = btn.getAttribute('data-title');
-      const desc = btn.getAttribute('data-desc');
-      let imgs;
-      try {
-        imgs = JSON.parse(btn.getAttribute('data-img') || "[]"); // parse JSON array
-      } catch (err) {
-        console.error("Invalid JSON in data-img", err);
-        imgs = [];
-      }
-      projectModal.querySelector('.modal-title').textContent = title;
-      projectModal.querySelector('#projectModalDesc').textContent = desc;
+    <!-- Navigation -->
+    <div id="lightboxPrev" style="position:absolute; left:20px; top:50%; transform:translateY(-50%);
+              font-size:50px; color:white; cursor:pointer;">&#10094;</div>
 
-      // Kosongkan carousel lama
-      const carouselInner = projectModal.querySelector('#projectCarouselInner');
-      carouselInner.innerHTML = '';
+    <div id="lightboxNext" style="position:absolute; right:20px; top:50%; transform:translateY(-50%);
+              font-size:50px; color:white; cursor:pointer;">&#10095;</div>
 
-      // Tambahkan gambar ke carousel
-      imgs.forEach((src, index) => {
-        const div = document.createElement('div');
-        div.classList.add('carousel-item');
-        if (index === 0) div.classList.add('active');
+    <!-- Image Container -->
+    <img id="lightboxImg"
+      style="max-width:90%; max-height:90%; object-fit:contain; cursor:grab; transition:transform 0.2s ease;">
+  </div>
 
-        const img = document.createElement('img');
-        img.src = src;
-        img.classList.add('d-block', 'w-100');
-        img.alt = `${title} image ${index + 1}`;
-        img.style.objectFit = "contain"; // landscape/portrait rapi
-        img.style.maxHeight = "400px";    // sesuaikan tinggi
-
-        div.appendChild(img);
-        carouselInner.appendChild(div);
-      });
-    });
-
-    // Form validation
-    (function () {
-      'use strict';
-      const forms = document.querySelectorAll('.needs-validation');
-      Array.from(forms).forEach(form => {
-        form.addEventListener('submit', event => {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        })
-      })
-    })();
-  </script>
 
 </body>
 
 </html>
-

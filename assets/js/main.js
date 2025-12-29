@@ -32,7 +32,7 @@ const projectModal = document.getElementById('projectModal');
 projectModal.addEventListener('hidden.bs.modal', () => {
     const videoFrame = projectModal.querySelector('#projectVideo');
     if (videoFrame) videoFrame.src = "";
-    });
+});
 
 projectModal.addEventListener('show.bs.modal', e => {
     const btn = e.relatedTarget;
@@ -41,7 +41,8 @@ projectModal.addEventListener('show.bs.modal', e => {
     const imgs = JSON.parse(btn.getAttribute('data-imgs') || "[]");
 
     projectModal.querySelector('.modal-title').textContent = title;
-    projectModal.querySelector('#projectModalDesc').textContent = desc;
+    projectModal.querySelector('#projectModalDesc').innerHTML = desc;
+
 
     const carouselInner = projectModal.querySelector('#projectCarouselInner');
     carouselInner.innerHTML = "";
@@ -84,7 +85,10 @@ emailBtn.addEventListener("click", e => {
         e.preventDefault(); // hentikan mailto
         navigator.clipboard.writeText("immanuelmanihuruk03@gmail.com")
             .then(() => {
-                alert("Email disalin!");
+                emailBtn.classList.add("text-success");
+                setTimeout(() => emailBtn.classList.remove("text-success"), 1200);
+
+                // alert("Email disalin!");
             })
             .catch(() => {
                 window.location.href = emailBtn.href;
